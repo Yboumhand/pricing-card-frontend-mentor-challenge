@@ -28,7 +28,6 @@ p {
 .card {
   box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.35);
   border-radius: 5px;
-  overflow: hidden;
 }
 
 .top-section {
@@ -38,26 +37,26 @@ p {
 }
 
 .bottom-section {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 55%;
   color: #e5eff5;
+  overflow: hidden;
 }
 
 .bottom-left-section {
-  display: inline-block;
-  width: 100%;
   height: 100%;
   background-color: #2ab2af;
   padding: 25px;
+  flex-basis: 50%;
 }
 
 .bottom-right-section {
-  display: inline-block;
-  width: 100%;
   height: 100%;
   background-color: #15cfca;
   padding: 25px;
-  vertical-align: top;
+  flex-basis: 50%;
 }
 
 .top-section h2 {
@@ -74,14 +73,11 @@ p {
 }
 
 .price {
-  display: inline-block;
   font-weight: 700;
   font-size: 1.4rem;
 }
 .price-frequency {
-  display: inline-block;
   position: relative;
-  top: -2px;
   color: #e5eff5;
   opacity: 0.7;
   font-size: 0.8rem;
@@ -89,12 +85,13 @@ p {
 }
 
 .price-container {
-  display: inline-block;
+  display: flex;
   margin-bottom: 10px;
 }
 
 .price-frequency {
   margin-left: 10px;
+  align-content: center;
 }
 
 button {
@@ -137,6 +134,11 @@ ul {
     width: 550px;
     height: 400px;
   }
+
+  .bottom-section {
+    flex-direction: row;
+  }
+
   .bottom-left-section,
   .bottom-right-section {
     width: 50%;
